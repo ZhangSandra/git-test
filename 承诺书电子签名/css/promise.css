@@ -1,0 +1,66 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    width: 10rem;
+    min-width: 320px;
+    background-color: #FFFFFF;
+    line-height: 1.5;
+    margin:0 auto;
+}
+@media screen and (min-width:750px) {
+    html {
+        font-size :75px !important;
+    }
+}
+
+h1 {
+    font-size: .746667rem;
+    font-family:SourceHanSansCN-Medium;
+    font-weight:bold;
+    color:rgba(67,76,103,1);
+    text-align: center;
+}
+
+p {
+    font-size:.453333rem;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    box-sizing: border-box;
+    padding: 0 .666667rem .4rem;
+    color:rgba(67,76,103,1);
+    line-height: .933333rem;
+    margin: 0 !important;
+}
+span {
+    border-bottom: .013333rem solid rgba(67,76,103,1);
+}
+.promise {
+    text-align: left;
+}
+
+
+/* 以下为新的css样式  .querybtn 样式可以删除*/ 
+.btnBox {
+    display: flex;
+    justify-content: space-around;
+}
+.btnBox > button {
+    font-size: .453333rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    border-radius: .133333rem;
+    outline: none;
+    border: 0;
+
+}
+#clearBtn {
+    height: 1.146667rem;
+    background:rgba(45,125,246,1);
+}
+#saveBtn {
+    height: 1.146667rem;
+    background:rgba(45,125,246,1);
+}

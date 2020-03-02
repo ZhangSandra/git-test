@@ -1,0 +1,283 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    width: 10rem;
+    min-width: 320px;
+    background-color: #FFFFFF;
+    line-height: 1.
+    
+    5;
+    margin:0 auto;
+}
+@media screen and (min-width:750px) {
+    html {
+        font-size :75px !important;
+    }
+}
+
+
+input {
+    background: none;
+    outline: none;
+    border: none;
+  }
+/* 头部背景图片 */
+header {
+    height: 8.213333rem;
+    width: 100%;
+    background: url(../img/banner@2x.png) no-repeat fixed top;
+    background-size: 100% 8.213333rem;
+}
+/* 中部用户信息 */
+.user-info {
+    width: 9.213333rem;
+    height: 10.693333rem;
+    background:rgba(255,255,255,1);
+    box-shadow: 0 0 .266667rem 0rem rgba(80,100,235,0.3);
+    border-radius: .266667rem;
+    position: absolute;
+    top: 5.333333rem;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    padding: 0 .666667rem;
+    z-index: 9;
+    display: block;
+}
+h3 {
+    text-align: center;
+    margin-top: .96rem;
+    font-size: .56rem;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(67,76,103,1);
+}
+ul {
+    list-style: none;
+}
+.infoDetail {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem 0;
+    position: relative;
+}
+/* 校验后的错误提示文字 */
+.infoDetail::after {
+    content: '太难了';
+    position: absolute;
+    bottom: -.466667rem;
+    right:0;
+    font-size: .32rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color:#ff0000;
+    display: none;
+}
+.infoDetail input::-webkit-input-placeholder {
+    font-size: 17p;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color:rgba(150,160,185,1);
+}
+.infoIcon {
+    align-self: center;
+    width: .453333rem;
+    height: .293333rem;
+}
+.infoIcon > img {
+    width: 100%;
+    height: 100%;
+}
+.infoText {
+    display: block;
+    height: .893333rem;
+    width: 7.133333rem;
+    border-bottom: .013333rem solid rgba(206,219,234,1);
+    line-height: .893333rem;
+    font-size: .426667rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color:rgba(67,76,103,1);
+}
+.querybtn {
+    width: 7.853333rem;
+    height: 1.146667rem;
+    background:rgba(45,125,246,1);
+    border-radius: .133333rem;
+    outline: none;
+    border: 0;
+    margin-top: .833333rem;
+    font-size: .453333rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+}
+
+
+/* 底部注释 */
+.footnote {
+    position: fixed;
+    bottom: .386667rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.arpa {
+    width: 1.426667rem;
+    height: .426667rem;
+}
+.company {
+    font-size: .32rem;
+    font-family: PingFang-SC-Regular;
+    font-weight: 400;
+    color:rgba(150,160,185,1);
+}
+
+/* ======弹窗样式 =========*/
+
+  /*弹窗*/
+
+  .dislog {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: none;
+    text-align: center;
+  }
+  
+/* 遮罩层 */
+.bgBox {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #858585;
+    opacity: 0.9;
+}
+/* 弹出框区域 */
+  .dis_cont {
+    position: relative;
+    border-radius: .133333rem;
+    top: 4rem;
+    text-align: center;
+    display: inline-block;
+    width: 7.466667rem;
+    height: 9.24rem;
+    background-color: #FFFFFF;
+    opacity: 1;
+  }
+  /*确认取消*/
+
+  .dis_bott {
+    position: absolute;
+    bottom: .53333rem;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: .8rem;
+    /* background-color: rgb(202, 51, 51); */
+    font-size: .426667rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    display: flex;
+    justify-content: center;
+  }
+  .dis_bott button {
+    outline:none;
+    -webkit-appearance: none;
+  }
+  /*取消按钮*/
+
+  .left_name > button {
+    width: 2.2rem;
+    height: .8rem;
+    line-height: .8rem;
+    color:rgba(45,125,246,1);
+    border: .026667rem solid rgba(45,125,246,1);
+    border-radius: .08rem;
+    background-color: #fff;
+    margin-right: .146667rem;
+  }
+  /*确认*/
+
+  .right_name > button{
+    width: 2.2rem;
+    height: .8rem;
+    line-height: .8rem;
+    color:#FFFFFF;
+    border: .013333rem solid rgba(45,125,246,1);
+    border-radius: .08rem;
+    background-color: #2D7DF6;
+    margin-right: .146667rem;
+  }
+  /* 提示*/
+
+  .cont_dis {
+    position: relative;
+    border-radius: .133333rem;
+    width: 100%;
+    height: 1.2rem;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: .506667rem;
+    font-family: PingFang-SC-Regular;
+    font-weight: 400;
+    color: rgba(67,76,103,1);
+  }
+
+
+  /* checkbox样式 */
+ .con_toast {
+    width: 100%;
+    list-style: none;
+    border-radius: .066667rem;
+    margin-top: .333333rem;
+    box-sizing: border-box;
+    padding-left: 1.333333rem;
+  }
+  
+  .toastBox {
+    width:100%;
+    padding: .206667rem 0;
+    box-sizing: border-box;
+    position:relative;
+    font-size: .506667rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    text-align: left;
+  }
+
+  .toastBox input[type=radio] {
+      visibility:hidden;
+  }
+  .toastBox label {
+      cursor:pointer;
+      position:absolute;
+      width: .333333rem;
+      height: .333333rem;
+      top:.445rem;
+      left:.14rem;
+      background:url('../img/normalpoint.png') no-repeat center;
+      background-size: 100% 100%;
+  }
+
+  .toastBox input[type=radio]:checked + label {
+    background:url('../img/point.png') no-repeat center;
+    background-size: 100% 100%;
+  }
+
+  .healthStatus {
+    text-align: center;
+    font-size: .586667rem;
+    font-family: PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(0,0,0,1);
+    margin-top: 1.04rem;
+}

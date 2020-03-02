@@ -1,0 +1,246 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    width: 10rem;
+    min-width: 320px;
+    background-color: #FFFFFF;
+    line-height: 1.5;
+    margin:0 auto;
+}
+@media screen and (min-width:750px) {
+    html {
+        font-size :75px !important;
+    }
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 1.2rem;
+    box-sizing: border-box;
+    padding: 0 .4rem;
+}
+header > img {
+    width: .226667rem;
+    height: .426667rem
+}
+header > h1 {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: .48rem; 
+    font-weight:500;
+    color:rgba(67,76,103,1);
+}
+header > a {
+    font-size: .373333rem;
+    font-weight:500;
+    color:rgba(67,76,103,1);  
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.tabBox {
+    list-style: none;
+    width: 100%;
+    height: 1.066667rem;
+    background:rgba(255,255,255,0.8);
+    display: flex;
+    justify-content: space-around;
+}
+.tabBox > li {
+    font-size: .4rem;
+    font-weight:400;
+    color:rgba(67,76,103,1);
+    height: 100%;
+    box-sizing: border-box;
+    line-height: 1.066667rem;
+}
+/* 当前tab被点击的样式 */
+.tabBox .currentTab {
+    color:#2D7DF6;
+    border-bottom: rgba(45,125,246,1) solid .066667rem;
+}
+.mapBox {
+    /* height: 9.906667rem; */
+    width: 100%;
+    position: absolute;
+    top: 1.2rem;
+    left: 0;
+    z-index: -1;
+}
+.mapBox .map {
+    width: 100%;
+    height: 100%;
+}
+.backplay {
+    background-color: #C5E7ED;
+}
+/* 二维码信息 开始 */
+.codeBox {
+    position: absolute;
+    /* top: 10.04rem; */
+    bottom:0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: .6rem .92rem .8rem .893333rem;
+    background:rgba(255,255,255,1);
+    box-shadow: 0 .133333rem .533333rem 0 rgba(40,106,255,0.4);
+    border-radius: .4rem .4rem 0 0;
+}
+/* 根据生成二维码改变字体颜色 */
+.codeBox h1 {
+    width: 100%;
+    font-size: .746667rem;
+    font-family:SourceHanSansCN-Medium;
+    font-weight:bold;
+    color:rgba(243,62,62,1);
+    text-align: center;
+}
+.codeBox p {
+    text-align: center;
+    font-size: .453333rem;
+    font-family:SourceHanSansCN-Regular;
+    font-weight:400;
+    color:rgba(67,76,103,1);
+}
+.codeInfo {
+    width: 8.16rem;
+    height: 4.066667rem;
+    /* 根据二维码情况 修改背景图片 
+    background: url(../img/code/danger.png) no-repeat center;
+    background-size: 100% 100%; */
+    box-shadow: 0 0 .2rem .133333rem rgba(134, 132, 132, 0.1);
+    margin-top: .36rem;
+    box-sizing: border-box;
+    padding: .493333rem .933333rem .48rem .706667rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.codeTitle {
+    width: 2.36rem;
+}
+.codeText {
+    width: 1.426667rem;
+    height: 1.426667rem;
+    font-size: .666667rem;
+    font-family:SourceHanSansCN-Bold;
+    font-weight:bold;
+    color:rgb(230, 33, 33);
+    line-height: 1.426667rem;
+    padding-right: .933333rem;
+    margin-bottom: .65rem;
+}
+/* 新添加样式 */
+/* .green */
+.green .codeInfo {
+    background: url(../img/code/safe.png) no-repeat top left;
+    background-size: 100% 100%;
+}
+.green h1 {
+    color:#0EC00A;
+}
+.green .codeText {
+    color:#0EC00A;
+}
+/* red */
+.red .codeInfo {
+    background: url(../img/code/danger.png) no-repeat top left;
+    background-size: 100% 100%;
+}
+.red h1 {
+    color:#F33E3E;
+}
+.red .codeText {
+    color:#F33E3E;
+}
+/* yellow */
+.yellow .codeInfo {
+    background: url(../img/code/warning.png) no-repeat top left;
+    background-size: 100% 100%;
+}
+.yellow h1 {
+    color:#FFB400;
+}
+.yellow .codeText {
+    color:#FFB400;
+}
+/* white */
+.white .codeInfo {
+    background: url(../img/code/defect.png) no-repeat top left;
+    background-size: 100% 100%;
+}
+.white h1 {
+    color:#434C67;
+}
+.white .codeText {
+    color:#FFFFFF;
+}
+
+
+.codeTitle a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: .373333rem;
+    font-family:PingFang-SC-Regular;
+    color: #434C67;
+    margin-left: .066667rem;
+}
+.codeImg {
+    width: 3.133333rem;
+    height: 3.133333rem;
+    background-color: seagreen;
+}
+
+/* loading */
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 99;
+    width: 3.133333rem;
+    height: 3.133333rem;
+    background-color: rgba(255, 255, 255, 0.8)
+}
+
+.loading-img {
+    width: 1.426667rem;
+    height: 1.426667rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+@keyframes turn {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    75% {
+        -webkit-transform: rotate(270deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.loading-img img {
+    width: 100%;
+    animation: turn 2s linear infinite;
+}
+
+.loading-none {
+    display: none;
+}

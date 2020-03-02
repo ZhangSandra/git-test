@@ -1,0 +1,123 @@
+@charset 'utf-8';
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    width: 10rem;
+    min-width: 320px;
+    background-color: #FFFFFF;
+    line-height: 1.5;
+    margin:0 auto;
+    /* min-height:100vh; */
+    min-height:100vh;
+    background-color: #F3F0F3;
+}
+@media screen and (min-width:750px) {
+    html {
+        font-size :75px !important;
+    }
+}
+header {
+    display: flex;
+    width: 100%;
+    height: 1.2rem;
+    box-sizing: border-box;
+    padding: 0 .4rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #ffffff;
+}
+
+header > img {
+    width: .226667rem;
+    height: .426667rem;
+    position: absolute;
+    left:.4rem;
+    top:50%;
+    transform: translateY(-50%);
+}
+header > h1 {
+    font-size: .48rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:#434C67;
+}
+.box {
+    position: relative;
+    width: 100%;
+    height: 8.026667rem;
+    background-color: #FDE0E3;
+    margin-top: .28rem;
+    box-sizing: border-box;
+    padding: 1.866667rem 1rem 0 1rem;
+}
+.box h1 {
+    font-family:FZDHTJW--GB1-0;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+.carinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2.666667rem;
+    font-size: .48rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(0,0,0,1);
+    margin-top: .133333rem;
+}
+.driver {
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    width: 9.173333rem;
+    height:1.146667rem;
+    position: absolute;
+    top: 10.08rem;
+    left:50%;
+    transform: translateX(-50%);
+    background:rgba(45,125,246,1);
+    border: 0px solid transparent;
+    outline: none;
+    border-radius:10px;
+    font-size: .453333rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+}
+.code {
+    position: absolute;
+    right: 1.08rem;
+    top: .546667rem;
+    width: 1.146667rem;
+    height:1.146667rem;
+}
+.code > img {
+    width: 100%;
+    height: 100%;
+}
+/* 新的保存按钮样式 */
+.save {
+    width: 7.853333rem;
+    height: 1.146667rem;
+    line-height: 1.146667rem;
+    text-align: center;
+    background:rgba(45,125,246,1);
+    border-radius: .133333rem;
+    outline: none;
+    border: 0;
+    font-size: .453333rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    position: absolute;
+    top: 9.953333rem;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: .433333rem;
+}

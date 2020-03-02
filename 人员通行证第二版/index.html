@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>疫情首页</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <script src="js/flexible.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <!-- 头部banner -->
+    <header></header>
+    <!-- 用户信息 -->
+    <section class="user-info">
+      <h3>车辆通行码</h3>
+      <ul class="infoBox">
+        <!-- 车牌号 -->
+        <li class="infoDetail">
+          <img src="./img/no@2x.png" alt="" class="init-icon infoIcon" />
+          <input type="text" class="infoText" placeholder="请输入车牌号" />
+        </li>
+        <!-- 姓名 -->
+        <li class="infoDetail">
+          <img src="./img/name@2x.png" alt="" class="init-icon infoIcon" />
+          <input type="text" class="infoText" placeholder="请输入姓名" />
+        </li>
+        <!-- 电话 -->
+        <li class="infoDetail">
+          <img src="./img/tel@2x.png" alt="" class="init-icon infoIcon" />
+          <input type="text" class="infoText" placeholder="请输入电话" />
+        </li>
+        <!-- 身份证号 -->
+        <li class="infoDetail">
+          <img src="./img/idcard@2x.png" alt="" class="init-icon infoIcon" />
+          <input type="text" class="infoText" placeholder="请输入身份证号" />
+        </li>
+      </ul>
+      <!-- 查询按钮 -->
+      <button class="querybtn">查询</button>
+    </section>
+    <!-- 底部 脚注 -->
+    <footer class="footnote">
+      <img src="./img/arpa@2x.png" class="arpa" />
+      <span class="company">&nbsp;&nbsp;华为&阿帕智慧物流云</span>
+    </footer>
+    
+    <!-- ++++++++++++弹窗+++++++++++++ -->
+    <div class="dislog">
+		<!-- 遮罩层 -->
+	  <div class="bgBox"></div>
+      <!--内容-->
+      <div class="dis_cont">
+        <div class="cont_dis">
+          <h1 class="healthStatus">本人目前身体状况</h1>
+          <ul class="con_toast">
+            <li class="toastBox">
+              <input type="radio" name="health" value="health" id="checkbox1" />
+              无身体不适
+              <label for="checkbox1"></label>
+            </li>
+            <li class="toastBox">
+              <input type="radio" name="health" value="cough" id="checkbox2" />
+                咳嗽
+              <label for="checkbox2"></label>
+            </li>
+            <li class="toastBox">
+              <input
+                type="radio"
+                name="health"
+                value="fatigue"
+                id="checkbox3"
+              />
+                乏力
+              <label for="checkbox3"></label>
+            </li>
+            <li class="toastBox">
+              <input type="radio" name="health" value="fever" id="checkbox4" />
+                发热
+              <label for="checkbox4"></label>
+            </li>
+            <li class="toastBox">
+              <input
+                type="radio"
+                name="health"
+                value="pneumonia"
+                id="checkbox5"
+              />
+                肺炎
+              <label for="checkbox5"></label>
+            </li>
+          </ul>
+        </div>
+        <div class="dis_bott">
+          <label class="left_name cances">
+            <button>取消</button>
+          </label>
+          <label class="right_name">
+            <button>确认</button>
+          </label>
+        </div>
+      </div>
+    </div>
+    <script>
+      //显示遮罩弹窗
+      function shows() {
+        $(".dislog").css("display", "block");
+      }
+      //隐藏遮罩弹窗
+      function nones() {
+        $(".dislog").css("display", "none");
+      }
+	//   点击查询按钮显示弹窗
+	  $(".querybtn").click(function() {
+		  shows()
+	  })
+
+	//   点击取消按钮隐藏弹窗
+	$(".cances").click(function () {
+		$(".dislog").css("display", "none");
+	})
+
+  // 获取选中的元素
+  $(".toastBox input").change(function () {
+    // 当前选中的值
+    console.log($(this).val());
+  
+    
+  })
+    </script>
+    <!-- 弹窗结束 -->
+  </body>
+</html>

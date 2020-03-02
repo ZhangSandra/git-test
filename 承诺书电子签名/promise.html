@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>承诺书</title>
+    <link rel="stylesheet" href="css/promise.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <script src="js/flexible.js"></script>
+    <!-- canvas -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+  </head>
+  <body>
+      <div class="textBox">
+        <h1>疫情防控承诺书</h1>
+        <p>因车辆轨迹缺失，本人郑重承诺：</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;姓名 <span>新冠病毒</span> ，身份证号 <span>000000000000000000</span>，车牌号 <span>鲁A0000000</span>，人、车在近14天内未到过疫情重点防控区域。</p>
+        <p class="promise">承诺人：</p>  
+      </div>
+
+        <div class="htmleaf-container">
+          <div class="container">
+      
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="js-signature" data-width="600" data-border="1px solid #cccccc" data-line-color="#000000" data-auto-fit="true"></div>
+                <!-- 这里有一个 包含按钮的盒子 ,btnBox,  删掉之前查询按钮.queryBtn 的标签 -->
+                  <div class="btnBox">
+                    <button id="clearBtn" class="btn btn-default" onclick="clearCanvas();">清除</button>
+                    <button id="saveBtn" class="btn btn-default" onclick="saveSignature();" disabled>保存并查看通行证明</button> 
+                  </div>
+            </div>
+          </div>   
+        </div>
+        <script src="js/jquery-1.11.0.min.js"></script>
+  <script src="js/jq-signature.js"></script>
+	
+	<script type="text/javascript">
+	
+		$(document).on('ready', function() {
+			if ($('.js-signature').length) {
+				$('.js-signature').jqSignature();
+			}
+		});
+
+		function clearCanvas() {
+			$('#signature').html('<p><em>Your signature will appear here when you click "Save Signature"</em></p>');
+			$('.js-signature').jqSignature('clearCanvas');
+			$('#saveBtn').attr('disabled', true);
+		}
+
+		function saveSignature() {
+			$('#signature').empty();
+      var dataUrl = $('.js-signature').jqSignature('getDataURL');
+      console.log(dataUrl);
+      
+    }
+    
+    // 禁止页面下拉出现网络来源
+    document.querySelector('body').addEventListener('touchmove', function(e) {
+      console.log(e);
+      
+    e.preventDefault();
+    })
+
+    // 画布高度跟随当前屏幕高度变化
+    $(".js-signature").jqSignature({height: heightCanvas()});
+    function heightCanvas() {
+        var headerH = $(".textBox").height()
+        var footerH = $(".btnBox").height()
+        var currentH = $(document).height()
+        console.log(footerH, headerH, currentH);
+        return currentH - headerH - footerH - 40
+    }
+    console.log(heightCanvas());
+    
+
+	</script>
+  </body>
+</html>

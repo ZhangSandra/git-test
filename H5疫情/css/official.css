@@ -1,0 +1,73 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    width: 10rem;
+    height:100%;
+    min-width: 320px;
+    background-color: #FFFFFF;
+    line-height: 1.5;
+    margin:0 auto;
+
+}
+@media screen and (min-width:750px) {
+    html {
+        font-size :75px !important;
+    }
+}
+
+.bg {
+    position:absolute; 
+    left:0px;
+    top:0px; 
+    width:100%; 
+    z-index:-1;
+    background: url(../img/officialbg.png) no-repeat center;
+    background-size: 100% 100%;
+}
+
+h1 {
+    position: absolute;
+    top: 3.733333rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .746667rem;
+    font-family:PingFang-SC-Heavy;
+    font-weight:800;
+    color:rgba(255,255,255,1);
+}
+
+.code {
+    width: 3.706667rem;
+    height: 3.706667rem;
+    position: absolute;
+    top: 5.333333rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.code > img {
+    width: 100%;
+    height: 100%;
+}
+.follow {
+    position: absolute;
+    top: 9.733333rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+.follow h3 {
+    font-size: .533333rem;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+}
+
+.follow p {
+    font-size: .373333rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+}

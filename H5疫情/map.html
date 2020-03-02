@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>二维码地图展示页</title>
+    <link rel="stylesheet" href="css/map.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <script src="js/flexible.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/map.js"></script>
+  </head>
+  <body>
+    <!-- loading -->
+    <div class="loading">
+      <div class="loading-img">
+          <img src="./img/loading.png" />
+      </div>
+  </div> 
+    <!-- 头部导航 -->
+    <header>
+        <img src="./img/back.png" alt="">
+        <h1>查询结果</h1>
+        <a href="">生成证明</a>
+    </header>
+    <!-- tab栏 -->
+    <ul class="tabBox">
+        <li class="currentTab">轨迹回放</li>
+        <li><a>轨迹记录</a></li>
+    </ul>
+    <!-- 地图区域 -->
+    <section class="mapBox">
+        <!-- 轨迹回放地图 -->
+        <div class="backplay map"></div>
+    </section>
+    <!-- 二维码展示区 -->
+    <footer class="codeBox">
+        <!-- 红码 -->
+        <div class="yellow">
+            <h1>封箱作业</h1>
+            <p>- 抗击病毒从自身做起 -</p>
+            <div class="codeInfo bgColor">
+                <div class="codeTitle">
+                    <div class="codeText bgImg">红码</div>
+                    <a href="">详情 ></a>
+                </div>
+                <div class="codeImg"></div>
+            </div>
+        </div>
+
+    </footer>
+    
+  </body>
+</html>
